@@ -1,0 +1,38 @@
+h1 {
+    font-size: 3.75em;
+    line-height: 1.222;
+    font-weight: 700;
+    font-family: ShopifySans, Helvetica, Arial, sans-serif;
+    letter-spacing: -0.025em;
+    text-align: left;
+}
+p{
+    font-weight: 300;
+    color: #637381;
+    font-size: 1.25em;
+    width:550px;
+    margin: auto;
+    font-family: 'Arial Black',cursive;
+}
+h6{
+    font-size: 0.875em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+body{
+    background-color: lightgoldenrodyellow;
+}
+
+
+.img{
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+video{
+    display: block;
+    vertical-align: center;
+}
