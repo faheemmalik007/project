@@ -8,9 +8,10 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
 <style>
-        
+
          h1 {
                  font-size: 3.75em;
                  line-height: 1.222;
@@ -37,22 +38,50 @@
                  background-color: lightgoldenrodyellow;
          }
 
-
-         .img{
-                       background-position: top center;
-                       background-repeat: no-repeat;
-                       background-size: cover;
-                       position: relative;
-           }
-
          video{
                  display: block;
                  vertical-align: center;
+         }
+
+         ul
+         {
+                 list-style-type: none;
+                 margin: 0;
+                 padding: 5px;
+                 overflow: hidden;
+                 background-color: #333;
+                 position: -webkit-sticky;
+                 position: sticky;
+                 top: 0;
+                 border: 2px outset darkblue;;
+                 font-size: large;
+                 font-weight: 700
+         }
+
+         li {
+                 float: left;
+         }
+
+         li a {
+                 display: block;
+                 color: white;
+                 text-align: center;
+                 padding: 14px 16px;
+                 text-decoration: none;
          }
          
 
 </style>
 <body>
+<div>
+<ul>
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a class="active" href="login.html">Login</a></li>
+        <li><a class="active" href="forget-password.html">Forget Password</a></li>
+        <li><a class="active" href="register.html">Register</a></li>
+        <li><a class="active" href="Contact-us.html">Contact</a></li>
+</ul>
+</div>
 
 <div class="container-fluid">
         <div class="row" style="background-color: #f4f6f8;margin-top: 0;margin-bottom: 0;padding-left: 5%;padding-right: 5%;">
@@ -99,11 +128,6 @@
 <br>
 
 <div class="container-fluid" align="center">
-
-                <video class="video inline-video"  controls >
-                        <source style="max-width: 80%" src="images/video.webm" type="video/mp4">
-                        <br>
-                </video>
 
                 <p class="p" style="color: black">The opportunity to shape how retail works is in our hands.</p>
 

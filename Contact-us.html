@@ -24,21 +24,60 @@
             line-height: 2.428571;
             background-color: lightgoldenrodyellow;
         }
+
         img{
-            max-width: 48%;
+            max-width: 20%;
+            max-height: 10%;
             margin: 2px auto 6px;
         }
+        ul{
+            list-style-type: none;
+            margin: 0px;
+            padding: 0px;
+            overflow: hidden;
+            background-color: black;
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            border: 2px outset darkblue;
+            font-size: large;
+            font-weight: 700
+
+        }
+
+        li {
+            float:left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
 
     </style>
 </head>
 <body>
 
+<div>
+<ul>
+    <li><a class="active" href="#home">Home</a></li>
+    <li><a class="active" href="About-us.html">About</a></li>
+    <li><a class="active" href="login.html">Login</a></li>
+    <li><a class="active" href="forget-password.html">Forget Password</a></li>
+    <li><a class="active" href="register.html">Register</a></li>
+</ul>
+</div>
+
 <h1 align="middle" style="color: midnightblue">Contact Us</h1>
 <div class="container-fluid">
-    <div class="row" style="background-color: #f4f6f8;margin-right: 20%; margin-left: 20%;margin-top: 1%;margin-bottom: 0.5%;">
+    <div class="row" style="background-color: #f4f6f8; margin-right: 20%; margin-left: 20%;margin-top: 1%;margin-bottom: 0.5%;">
         <div class="img-fluid">
             <a href="#">
-                <img src="images/img3.jpg" align="right" width="20%" height="10%">
+                <img src="images/img3.jpg" align="right">
             </a>
             <table align="left">
                 <tr>
@@ -69,7 +108,7 @@
     <div class="row" style="background-color: #f4f6f8;margin-right: 20%; margin-left: 20%;margin-top: 1%;margin-bottom: 0.5%;">
         <div class="img-fluid">
             <a href="#">
-                <img src="images/img4.png" align="right" width="20%" height="10%">
+                <img src="images/img4.png" align="right">
             </a>
             <table align="left">
                 <tr>
@@ -100,7 +139,7 @@
     <div class="row" style="background-color: #f4f6f8;margin-right: 20%; margin-left: 20%;margin-top: 1%;margin-bottom: 0.5%;">
         <div class="img-fluid">
             <a href="#">
-                <img src="images/img5.jpg" align="right" width="20%" height="10%">
+                <img src="images/img5.jpg" align="right">
             </a>
             <table align="left">
                 <tr>
@@ -131,7 +170,7 @@
     <div class="row" style="background-color: #f4f6f8;margin-right: 20%; margin-left: 20%;margin-top: 1%;margin-bottom: 0.5%;">
         <div class="img-fluid">
             <a href="#">
-                <img src="images/img6.jpg" align="right" width="20%" height="10%">
+                <img src="images/img6.jpg" align="right" >
             </a>
             <table align="left">
                 <tr>
@@ -142,10 +181,8 @@
                     <td class="td">Phone :</td>
                     <td style="color: darkslategray">0333-4327005</td>
                 </tr>
-
                 <tr>
                     <td class="td">Email :</td>
-
                     <td style="color: darkslategray"><a href="#">Khaqannadeem@gmail.com</a></td>
                 </tr>
                 <tr>
