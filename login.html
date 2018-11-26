@@ -7,79 +7,37 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bangers|Old+Standard+TT">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/login.css">
 
     <style>
 
-        * {
-            font-family: 'Old Standard TT', serif;
-        }
-        * {
-            box-sizing: border-box;
-        }
 
-        input[type=text], select, textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            resize: vertical;
-        }
-
-        label {
-            padding: 12px 12px 12px 0;
-            display: inline-block;
-        }
-
-        input[type=submit] {
-            background-color: #4CAF50;
-            color: white;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            float: right;
-        }
-
-        input[type=submit]:hover {
-            background-color: #45a049;
-        }
-
-        .container {
-            border-radius: 5px;
-            background-color: #f2f2f2;
-            padding: 20px;
-            height: 200px;
-        }
-
-        .col-25 {
-            float: left;
-            width: 25%;
-            margin-top: 6px;
-        }
-
-        .col-75 {
-            float: left;
-            width: 75%;
-            margin-top: 6px;
-        }
-
-        /* Clear floats after the columns */
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
     </style>
 </head>
 <body>
-<div class="container">
-    <form>
+<div class="wrapper">
+    <div class="header">
+        <ul>
+            <li><a  href="index.html">Home </a></li>
+            <li><a  href="About-us.html">About</a></li>
+            <li><a class="active" href="#login">Login</a></li>
+            <li><a  href="forget-password.html">Forget Password</a></li>
+            <li><a  href="register.html">Register</a></li>
+            <li><a  href="Contact-us.html">Contact </a></li>
+        </ul>
+        <div class="search"><i class="fas fa-search"></i></div>
+    </div>
+<br>
+    <br>
+    <br>
 
+<div class="container" >
+    <form>
 
         <div class="row">
             <div class="col-25">
-                <label >Email</label>
+
+                <label  >Email</label>
             </div>
             <div class="col-75">
                 <input type="email"  placeholder="Your email ..">
@@ -101,5 +59,9 @@
         </div>
     </form>
 </div>
+    <div class="footer">
+        Copyrights ECommerce.com
+    </div>
+
 </body>
 </html>
