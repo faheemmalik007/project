@@ -1,67 +1,77 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
     <meta charset="UTF-8">
-    <title>Assignment-2</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bangers|Old+Standard+TT">
+    <title>Login</title>
+    <meta name="description" content="Login - Register Template">
+    <meta name="author" content="Lorenzo Angelino aka MrLolok">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/login.css">
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
-
-
+        body {
+            background-color: #F2F2F2;
+        }
     </style>
 </head>
+
 <body>
-<div class="wrapper">
+
+<div>
     <div class="header">
         <ul>
-            <li><a  href="index.html">Home </a></li>
+            <li><a  href=index.html">Home </a></li>
             <li><a  href="About-us.html">About</a></li>
-            <li><a class="active" href="#login">Login</a></li>
+            <li><a  href="login.html">Login</a></li>
             <li><a  href="forget-password.html">Forget Password</a></li>
-            <li><a  href="register.html">Register</a></li>
+            <li><a class="active" href="#register">Register</a></li>
             <li><a  href="Contact-us.html">Contact </a></li>
         </ul>
         <div class="search"><i class="fas fa-search"></i></div>
     </div>
-<br>
-    <br>
-    <br>
 
-<div class="container" >
-    <form>
-
-        <div class="row">
-            <div class="col-25">
-
-                <label  >Email</label>
-            </div>
-            <div class="col-75">
-                <input type="email"  placeholder="Your email ..">
-            </div>
+    <div id="container-login">
+        <div id="title">
+            <i class="material-icons lock">lock</i> Login
         </div>
 
-        <div class="row">
-            <div class="col-25">
-                <label >Password</label>
+        <form>
+            <div class="input">
+                <div class="input-addon">
+                    <i class="material-icons">face</i>
+                </div>
+                <input id="username" placeholder="Username" type="text" required class="validate" autocomplete="off">
             </div>
-            <div class="col-75">
-                <input type="password"  placeholder="***********">
+
+            <div class="clearfix"></div>
+
+            <div class="input">
+                <div class="input-addon">
+                    <i class="material-icons">vpn_key</i>
+                </div>
+                <input id="password" placeholder="Password" type="password" required class="validate" autocomplete="off">
             </div>
+
+            <div class="remember-me">
+                <input type="checkbox">
+                <span style="color: #757575">Remember Me</span>
+            </div>
+
+            <input type="submit" value="Log In" />
+        </form>
+
+        <div class="forgot-password">
+            <a href="#">Forgot your password?</a>
+        </div>
+        <div class="privacy">
+            <a href="#">Privacy Policy</a>
         </div>
 
-
-        <div class="row" style="float: left ;margin-left: 350px">
-            <input type="submit" value="Login">
+        <div class="register">
+            <span style="color: #657575">Don't have an account yet?</span>
+            <a href="#"><button id="register-link">Register here</button></a>
         </div>
-    </form>
-</div>
-    <div class="footer">
-        Copyrights ECommerce.com
     </div>
-
 </body>
+
 </html>
