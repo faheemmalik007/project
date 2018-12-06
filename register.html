@@ -1,24 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
     <meta charset="UTF-8">
-    <title>Assignment-2</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bangers|Old+Standard+TT">
+    <title>Register</title>
+    <meta name="description" content="Login - Register Template">
+    <meta name="author" content="Lorenzo Angelino aka MrLolok">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/register.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
-
-
+        body {
+            background-color: #F2F2F2;
+        }
     </style>
 </head>
-<body>
 
-<div class="wrapper">
+<body>
+<div>
     <div class="header">
         <ul>
-            <li><a  href=index.html">Home </a></li>
+            <li><a  href=index.html>Home </a></li>
             <li><a  href="About-us.html">About</a></li>
             <li><a  href="login.html">Login</a></li>
             <li><a  href="forget-password.html">Forget Password</a></li>
@@ -27,78 +28,60 @@
         </ul>
         <div class="search"><i class="fas fa-search"></i></div>
     </div>
-    <br>
-    <br>
-    <br>
 
-<div class="container">
-    <form>
-        <div class="row">
-            <div class="col-25">
-                <label>First Name</label>
-            </div>
-            <div class="col-75">
-                <input type="text" placeholder="Your name..">
-            </div>
+
+    <div id="container-register" >
+        <div id="title" >
+            <i class="material-icons lock">lock</i> Register
         </div>
-<div class="row">
-    <div class="col-25">
-        <label>Last Name</label>
-    </div>
-    <div class="col-75">
-        <input type="text"  placeholder="Your last name..">
+
+        <form >
+            <div class="input">
+                <div class="input-addon">
+                    <i class="material-icons">email</i>
+                </div>
+                <input id="email" placeholder="Email" type="email" required class="validate" autocomplete="off">
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="input">
+                <div class="input-addon">
+                    <i class="material-icons">face</i>
+                </div>
+                <input id="username" placeholder="Username" type="text" required class="validate" autocomplete="off">
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="input">
+                <div class="input-addon">
+                    <i class="material-icons">vpn_key</i>
+                </div>
+                <input id="password" placeholder="Password" type="password" required class="validate" autocomplete="off">
+            </div>
+
+            <div class="remember-me">
+                <input type="checkbox">
+                <span style="color: #757575">I accept Terms of Service</span>
+            </div>
+
+            <input type="submit" value="Register" />
+        </form>
+
+        <div class="privacy">
+            <a href="#">Privacy Policy</a>
+        </div>
+
+        <div class="register">
+            <span style="color: #657575">Do you already have an account?</span>
+            <a href="#"><button id="register-link">Log In here</button></a>
+        </div>
     </div>
 </div>
-
-        <div class="row">
-        <div class="col-25">
-            <label >Email</label>
-        </div>
-        <div class="col-75">
-            <input type="email"  placeholder="Your email ..">
-        </div>
-    </div>
-<div class="row">
-    <div class="col-25">
-        <label >Country</label>
-    </div>
-    <div class="col-75">
-        <select >
-            <option value="australia">Pakistan</option>
-            <option value="canada">India</option>
-            <option value="usa">China</option>
-            <option value="usa">Japan</option>
-            <option value="usa">Austrailia</option>
-        </select>
-    </div>
-</div>
-        <div class="row">
-            <div class="col-25">
-                <label >Password</label>
-            </div>
-            <div class="col-75">
-                <input type="password"  placeholder="***********">
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-25">
-                <label>Confirm Password</label>
-            </div>
-            <div class="col-75">
-                <input type="password" placeholder="***********">
-            </div>
-        </div>
-<div class="row" style="float: left ;margin-left: 280px;margin-top: 18px">
-    <input type="submit" value="Submit">
-</div>
-</form>
-</div>
-
-
-    <div class="footer">
-        Copyrights ECommerce.com
-    </div>
-
+<!--<div id="footer">-->
+    <!--Copyrights ECommerce.com-->
+<!--</div>-->
 </body>
+
 </html>
