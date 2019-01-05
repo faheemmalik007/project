@@ -33,43 +33,18 @@
 
 }
 
+.icon_color{
+    color: white;
+    font-size: x-large;
+    padding: 3px;
+}
+
 
 #container{
     box-sizing: border-box;
     width:100%;
     height: auto;
 
-}
-
-.col span{
-    position: absolute;
-    margin-left: 2%;
-    padding-bottom: 40%;
-    width: auto;
-    height: auto;
-    font-size: 30px;
-    text-decoration: none;
-    text-align: center;
-    transition: .3s ease-in-out;
-    opacity: 0;
-}
-span:hover{
-    opacity: 1;
-}
-
-img{
-    width: auto ;
-    max-width: 200% ;
-    height: auto ;
-}
-
-.col{
-    box-sizing: border-box;
-    width:100%;
-    height:auto;
-    display: inline-flex;
-    margin-bottom: 10%;
-    overflow: hidden;
 }
 
 
