@@ -1,3 +1,30 @@
+<?php
+
+require_once "db_conn.php";
+
+if (isset($_POST['submit_btnn'])){
+    $firstname = $_POST['fullname_'];
+    $email = $_POST['email_'];
+    $userName = $_POST['userName_'];
+    $password = $_POST['password_'];
+    $confirmPassword= $_POST['confirmPassword_'];
+    $address = $_POST['address_'];
+    $dob = $_POST['dob_'];
+    $gender = $_POST['gender_'];
+
+}
+
+
+$insert_user_info = "insert into user_info (name,email,username,password,confirmPassword,address,dob,gender) 
+                  VALUES ('$firstname','$email','$userName','$password','$confirmPassword','$address','$dob','$gender');";
+$inserted_user = mysqli_query($conn, $insert_user_info);
+
+//if($inserted_user){
+//    header("location: ".$_SERVER['PHP_SELF']);
+//}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -75,8 +102,8 @@
         }
         body
         {
-            background-image: url(https://png2.kisspng.com/20180326/liw/kisspng-gradient-desktop-wallpaper-color-background-5ab88c172773b8.5174360515220439271616.png);
-            background-repeat: no-repeat;
+            /*background-image: url(https://png2.kisspng.com/20180326/liw/kisspng-gradient-desktop-wallpaper-color-background-5ab88c172773b8.5174360515220439271616.png);*/
+            /*background-repeat: no-repeat;*/
             background-size:auto;
             font-family:'awesome';
             box-sizing: border-box;
@@ -120,9 +147,7 @@
 
         }
 
-        .header ul li a.active{
-            background-color:#f20068;
-        }
+
 
 
     </style>
@@ -132,24 +157,24 @@
 <div class="wrapper">
     <div class="header">
         <ul>
-            <li><a  href=index.html>Home </a></li>
-            <li><a  href="About-us.html">About</a></li>
-            <li><a  href="login.html">Login</a></li>
-            <li><a  href="forget-password.html">Forget Password</a></li>
-            <li><a  href="register.html">Register</a></li>
-            <li><a  href="Contact-us.html">Contact </a></li>
+            <li><a  href="index.php">Home </a></li>
+            <li><a  href="About-us.php">About</a></li>
+            <li><a  href="login.php">Login</a></li>
+            <li><a  href="forget-password.php">Forget Password</a></li>
+            <li><a  href="register.php">Register</a></li>
+            <li><a  href="Contact-us.php">Contact </a></li>
         </ul>
         <div class="search"><i class="fas fa-search"></i></div>
     </div>
 </div>
 <div class="container" style ="margin-top: 0%">
-    <form id="FormBody" style="margin-top: 7%; margin-bottom: 10% ; padding: 3%">
+    <form id="FormBody" method="post"  action="register.php" >
         <div>
             <div class="row my-3">
                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-10 offset-xl-4 offset-lg-4 offset-md-3 offset-sm-1">
                     <p style="color: white" class="d-none d-sm-block">Full Name :</p>
                     <i style="color:white" class="custom fas fa-font mt-1"></i>
-                    <input type="text" class="InpuTTags" id="Tg-fullname" name="fullname" placeholder="Enter Full Name" >
+                    <input type="text" class="InpuTTags" id="Tg-fullname" required name="fullname_" placeholder="Enter Full Name" >
                 </div>
             </div>
 
@@ -157,7 +182,7 @@
                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-10 offset-xl-4 offset-lg-4 offset-md-3 offset-sm-1">
                     <p style="color: white;"class="d-none d-sm-block">Email: </p>
                     <i style="color:white"class="custom fas fa-envelope"></i>
-                    <input type="text" class="InpuTTags" id="Tg-email" name="email" placeholder="Enter Email Address" >
+                    <input type="text" class="InpuTTags" id="Tg-email" required name="email_" placeholder="Enter Email Address" >
                 </div>
             </div>
 
@@ -165,7 +190,7 @@
                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-10 offset-xl-4 offset-lg-4 offset-md-3 offset-sm-1">
                     <p style="color: white" class="d-none d-sm-block">Username: </p>
                     <i style="color:white" class="custom fas fa-font mt-1"></i>
-                    <input type="text" class="InpuTTags" id="Tg-Username" name="User" placeholder="Username" >
+                    <input type="text" class="InpuTTags" id="Tg-Username" required name="userName_" placeholder="Username" >
                 </div>
             </div>
 
@@ -173,40 +198,38 @@
                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-10 offset-xl-4 offset-lg-4 offset-md-3 offset-sm-1">
                     <p style="color: white" class="d-none d-sm-block"> Password:</p>
                     <i style="color: white;" class="custom fas fa-user-circle mt-1"></i>
-                    <input type="password" class="InpuTTags" id="Tg-password" name="password" placeholder="Enter Password" >
+                    <input type="password" class="InpuTTags" id="Tg-password" required name="password_" placeholder="Enter Password" >
                 </div>
             </div>
 
             <div class="row my-3">
                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-10 offset-xl-4 offset-lg-4 offset-md-3 offset-sm-1">
-                    <p style="color: white" class="d-none d-sm-block">Confirm Password :</p>
+                    <p style="color: white" class="d-none d-sm-block">Confirm Password:</p>
                     <i style="color: white;" class="custom fas fa-user-circle mt-1"></i>
-                    <input type="password" class="InpuTTags" id="Tg-cpassword" name="cpassword" placeholder="Enter Confirm Password" >
+                    <input type="password" class="InpuTTags" required  name="confirmPassword_"  placeholder="Re Enter Password" >
                 </div>
             </div>
 
 
-
             <div class="row my-3">
                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-10 offset-xl-4 offset-lg-4 offset-md-3 offset-sm-1">
-                    <p style="color: white" class="d-none d-sm-block">Location:</p>
+                    <p style="color: white" class="d-none d-sm-block">Address</p>
                     <i style="color:white" class="custom fas fa-location-arrow"></i>
-                    <input type="text" class="InpuTTags" id="Tg-location" name="location" placeholder="Enter Location" >
+                    <input type="text" class="InpuTTags" id="Tg-location" required name="address_" placeholder="Enter Address " >
                 </div>
             </div>
 
             <div class="row my-3">
                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-10 offset-xl-4 offset-lg-4 offset-md-3 offset-sm-1">
                     <p style="color: white" class="d-none d-sm-block">Date Of Birth:</p>
-                    <input type = "date" name = "DateOfBirth"> </input>
+                    <input type = "date" required name = "dob_">
                 </div>
             </div>
 
             <div class="row my-3">
                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-10 offset-xl-4 offset-lg-4 offset-md-3 offset-sm-1">
                     <p style="color: white" class="d-none d-sm-block">Gender:</p>
-                    <select class="form-control" id="user_gender" name="user_gender">
-                        <option>Select Gender</option>
+                    <select class="form-control" id="user_gender" required name="gender_">
                         <option>Male</option>
                         <option>Female</option>
                         <option>Enjoy</option>
@@ -214,16 +237,9 @@
                 </div>
             </div>
 
-            <!--<div class="row my-3">-->
-                <!--<div class="col-xl-4 col-lg-4 col-md-6 col-sm-10 offset-xl-4 offset-lg-4 offset-md-3 offset-sm-1">-->
-                    <!--<p style="color: white" class="d-none d-sm-block">Profile Picture :</p>-->
-                    <!--<input class="form-control" type="file" id="prof_img" name="prof_img">-->
-                <!--</div>-->
-            <!--</div>-->
-
             <div class="row my-3">
                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 offset-xl-4 offset-lg-4 offset-md-3 offset-sm-1">
-                    <button id="btn-Signup" type="submit"> Sign Up </button>
+                    <button id="btn-Signup" type="submit" name="submit_btnn" > Sign Up </button>
                 </div>
             </div>
         </div>
