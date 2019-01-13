@@ -23,7 +23,7 @@ body{
     clear: both;
     float: left;
     width: 100%;
-    background: #292929;
+    background: #857E7A;
     height: 42px;
     margin-top: 0;
 }
@@ -50,13 +50,11 @@ float: left;
 }
 
 #header ul li a:hover{
-    background-color:#f20068;
+    background-color:#857E7A;
 
 }
 
-#header ul li a.active{
-    background-color:#f20068;
-}
+
 
 
 /*
@@ -119,7 +117,7 @@ float: left;
 }
 
 #contenarea #side .thumbs h2{
-    background: #f20068;
+    background: #857E7A;
     width: 100%;
     text-align: center;
     color: white;
@@ -136,7 +134,7 @@ float: left;
         clear: both;
         float: none;
         width: 100%;
-        background: #292929;
+        background: #857E7A;
         height: 250px;
         margin-top: 0;
     }
@@ -157,12 +155,12 @@ float: left;
     }
 
     #header ul li a:hover{
-        background-color:#f20068;
+        background-color:#857E7A;
 
     }
 
     #header ul li a.active{
-        background-color:#f20068;
+        background-color:#857E7A;
     }
 
 
@@ -191,7 +189,7 @@ float: left;
         height: 30px;
         line-height: 30px;
         color: #fff;
-        background: #333;
+        background: #857E7A;
         position: fixed;
         bottom: 0;
         text-align: center;
@@ -223,7 +221,7 @@ float: left;
     }
 
     #contenarea #side .thumbs h2{
-        background: #f20068;
+        background: #857E7A;
         width: 100%;
         text-align: center;
         color: white;
