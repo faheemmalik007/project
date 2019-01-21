@@ -14,7 +14,6 @@ if (isset($_POST['submit_btnn'])){
 
 }
 
-
 $insert_user_info = "insert into user_info (name,email,username,password,confirmPassword,address,dob,gender) 
                   VALUES ('$firstname','$email','$userName','$password','$confirmPassword','$address','$dob','$gender');";
 $inserted_user = mysqli_query($conn, $insert_user_info);
@@ -23,7 +22,6 @@ $inserted_user = mysqli_query($conn, $insert_user_info);
 //    header("location: ".$_SERVER['PHP_SELF']);
 //}
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -182,9 +180,11 @@ $inserted_user = mysqli_query($conn, $insert_user_info);
                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-10 offset-xl-4 offset-lg-4 offset-md-3 offset-sm-1">
                     <p style="color: white;"class="d-none d-sm-block">Email: </p>
                     <i style="color:white"class="custom fas fa-envelope"></i>
-                    <input type="text" class="InpuTTags" id="Tg-email" required name="email_" placeholder="Enter Email Address" >
+                    <input type="text" class="InpuTTags " id="Tg-email" required name="email_" placeholder="Enter Email Address"
+                    pattern="^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$">
                 </div>
             </div>
+
 
             <div class="row my-3">
                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-10 offset-xl-4 offset-lg-4 offset-md-3 offset-sm-1">
